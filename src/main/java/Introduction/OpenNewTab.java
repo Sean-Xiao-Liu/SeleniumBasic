@@ -17,7 +17,7 @@ public class OpenNewTab {
             // open link in new tab
             driver.get("https://www.google.com"); // open url on corresponding browser
             String selectLinkOpeninNewTab = Keys.chord(Keys.COMMAND,Keys.RETURN); // for windows, using Keys.CONTROL instead of Keys.COMMAND
-            driver.findElement(By.linkText("About")).sendKeys(selectLinkOpeninNewTab);
+            driver.findElement(By.linkText("About")).sendKeys(selectLinkOpeninNewTab); // il
             Thread.sleep(3000);
 
 
