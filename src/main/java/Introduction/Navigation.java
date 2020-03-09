@@ -18,7 +18,7 @@ public class Navigation {
             Thread.sleep(2000); // pause for 2 sec
 
             // navigate to carfax
-            driver.navigate().to("https://www.carfax.com");
+            driver.navigate().to("https://www.carfax.com"); // to method are overloaded, can take both String url and URL url, https://www.selenium.dev/selenium/docs/api/java/index.html
             Thread.sleep(2000); // pause for 2 sec
 
             // back to google
