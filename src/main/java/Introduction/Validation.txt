@@ -1,0 +1,7 @@
+To validate the xpath or css before putting them into the code, go to the page console
+
+for xpath
+input $x("//relative xpath") and the a hyper link to the element on the page should show up
+
+for css
+input $("css locator")
