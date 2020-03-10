@@ -1,5 +1,6 @@
 package Introduction;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,10 +8,14 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DropDown {
 
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver;
 
 
     public void staticDropDowm(){
+
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+
         driver.get("https://beta.carfax.com/cars-for-sale");
 
         driver.findElement(By.xpath("//select[@name='make']")).click();
@@ -25,7 +30,9 @@ public class DropDown {
     }
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","/Users/seanliu/Documents/Web Driver/chromedriver");
+//        System.setProperty("webdriver.chrome.driver","/Users/seanliu/Documents/Web Driver/chromedriver");
+
+
 
         DropDown test = new DropDown();
         test.staticDropDowm();

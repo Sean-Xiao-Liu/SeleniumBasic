@@ -1,5 +1,6 @@
 package Introduction;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,8 @@ public class TextBoxAndButton {
     public void invokeBrowser(){
 
         try {
-            System.setProperty("webdriver.gecko.driver", "/Users/seanliu/Documents/Web Driver/geckodriver");// set up env properties, driver name and location
+//            System.setProperty("webdriver.gecko.driver", "/Users/seanliu/Documents/Web Driver/geckodriver");// set up env properties, driver name and location
+            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver(); // create driver object
 
 //        System.setProperty("webdriver.chrome.driver","/Users/seanliu/Documents/Web Driver/chromedriver");
