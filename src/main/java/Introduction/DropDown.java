@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import javax.swing.plaf.TableHeaderUI;
-
 public class DropDown {
 
     WebDriver driver;
