@@ -74,11 +74,8 @@ public class DropDown {
         } catch (Exception e){
             e.getMessage();
         }
-
-
-
-
     }
+
 
 
     public static void main(String[] args) {
