@@ -1,4 +1,4 @@
-package Introduction;
+package introduction;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

@@ -1,14 +1,11 @@
-package Introduction;
+package introduction;
 
-import io.cucumber.java.an.E;
-import io.cucumber.java.en_old.Tha;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import javax.swing.plaf.TableHeaderUI;
 import java.util.List;
 
 public class Table {

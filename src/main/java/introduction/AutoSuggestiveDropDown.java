@@ -1,13 +1,10 @@
-package Introduction;
+package introduction;
 
-import io.cucumber.java.bs.A;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.security.AuthProvider;
 
 //after input sth, will come up with the suggestion and make selection from there
 // also use loop to repeat the click process

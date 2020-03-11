@@ -1,4 +1,4 @@
-package Carfax;
+package carfax;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

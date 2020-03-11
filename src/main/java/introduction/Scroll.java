@@ -1,4 +1,4 @@
-package Introduction;
+package introduction;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
