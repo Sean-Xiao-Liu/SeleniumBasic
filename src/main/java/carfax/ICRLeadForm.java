@@ -184,11 +184,5 @@ public class ICRLeadForm {
         ICRLeadForm test = new ICRLeadForm();
         test.findICR();
 
-//        for(int i = 2 ; i < 5 ; i++){
-//            test.findICR();
-//            System.out.println("This is the " + i + " time");
-//            i++;
-//        }
-
     }
 }
