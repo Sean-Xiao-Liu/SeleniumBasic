@@ -87,13 +87,13 @@ public class ICRLeadForm {
 
 
     public void switchTab(){
-        String oldTab = driver.getWindowHandle(); // get current window handle
+//        String oldTab = driver.getWindowHandle(); // get current window handle
         allTabs = new LinkedList<>(driver.getWindowHandles());
 
-        System.out.println(oldTab);
-        for(int i = 0 ; i < allTabs.size() ; i++){
-            System.out.println(allTabs.get(i));
-        }
+//        System.out.println(oldTab);
+//        for(int i = 0 ; i < allTabs.size() ; i++){
+//            System.out.println(allTabs.get(i));
+//        }
     }
 
     public void sendMessageToDealer(){
@@ -112,7 +112,7 @@ public class ICRLeadForm {
             //send message
             driver.findElement(By.xpath("//button[@class='search-submit button large expanded primary-green']")).click();
 
-            Thread.sleep(10000);
+            Thread.sleep(3000);
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -124,23 +124,26 @@ public class ICRLeadForm {
 
         try {
             stepOnePage();
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             stepTwoPage();
             driver.findElement(By.xpath("//span[contains(text(),'2019 Audi A5 Premium Plus')]")).click();
+
             switchTab();
-            driver.switchTo().window(allTabs.get(1));
+            driver.switchTo().window(allTabs.get(allTabs.size()-1));
 
             scroll.scrollToBottom(driver);
 
             scroll.scrollToElement(driver.findElement(By.xpath("//div[@class='vdp-container-body']//a[@class='button large'][contains(text(),'View FREE CARFAX Report')]")),driver); // have to switch tab before find element
+            Thread.sleep(2000);
             driver.findElement(By.xpath("//div[@class='vdp-container-body']//a[@class='button large'][contains(text(),'View FREE CARFAX Report')]")).click();
 
-            allTabs = new LinkedList<>(driver.getWindowHandles());
+//            allTabs = new LinkedList<>(driver.getWindowHandles());
+            switchTab();
 
-            driver.switchTo().window(allTabs.get(allTabs.size()-1));
-            if(driver.getWindowHandle().equals(allTabs.get(2))){
-                System.out.println("tab switch successful");
-            }
+            driver.switchTo().window(allTabs.get(allTabs.size()-1)); // switch to the new tab
+//            if(driver.getWindowHandle().equals(allTabs.get(2))){
+//                System.out.println("tab switch successful");
+//            }
 
 
 //            scroll.scrollToBottom(driver);
@@ -166,13 +169,13 @@ public class ICRLeadForm {
 
 //            leadForm.isLeadFormEnabled();
 
-            Thread.sleep(10000);
+            Thread.sleep(3000);
 
         } catch (Exception e){
             System.out.println(e.getMessage());
 
         } finally {
-
+            System.out.println("The test is finished!");
             driver.quit();
         }
     }
@@ -180,6 +183,12 @@ public class ICRLeadForm {
     public static void main(String[] args) {
         ICRLeadForm test = new ICRLeadForm();
         test.findICR();
+
+//        for(int i = 2 ; i < 5 ; i++){
+//            test.findICR();
+//            System.out.println("This is the " + i + " time");
+//            i++;
+//        }
 
     }
 }
