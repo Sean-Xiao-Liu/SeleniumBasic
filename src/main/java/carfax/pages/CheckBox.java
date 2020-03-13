@@ -1,6 +1,5 @@
-package introduction;
+package carfax.pages;
 
-import carfax.pages.StepOnePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
