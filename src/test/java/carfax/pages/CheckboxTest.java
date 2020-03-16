@@ -18,7 +18,7 @@ public class CheckboxTest {
     public CheckBox checkBox = new CheckBox(driver);
 
     @Before
-    public void setup(){
+    public void setup() {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();// maximize the window when open a new one
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); // wait 10 sec before throwing "No Such Element Exception"
@@ -26,13 +26,12 @@ public class CheckboxTest {
     }
 
 
-
     @After
-    public void tearDown(){
+    public void tearDown() {
         DriverConfiguration.closeDriver();
     }
 
-//    @Ignore
+    //    @Ignore
     @Test
     public void clickNoAccientTest() throws InterruptedException {
 
@@ -42,9 +41,9 @@ public class CheckboxTest {
         assertTrue(checkBox.noAccident.isDisplayed() && checkBox.noAccident.isEnabled());
     }
 
-//    @Ignore
+    //    @Ignore
     @Test
-    public void clickOneOwnerTest()throws InterruptedException{
+    public void clickOneOwnerTest() throws InterruptedException {
         checkBox.clickOneOwner();
         Thread.sleep(2000);
         checkBox.clickOneOwner();
@@ -52,18 +51,18 @@ public class CheckboxTest {
 
     }
 
-//    @Ignore
+    //    @Ignore
     @Test
-    public void clickPersonalUseTest()throws InterruptedException{
+    public void clickPersonalUseTest() throws InterruptedException {
         checkBox.clickPersonalUse();
         Thread.sleep(2000);
         checkBox.clickOneOwner();
         assertTrue(checkBox.personalUse.isDisplayed() && checkBox.personalUse.isEnabled());
     }
 
-//    @Ignore
+    //    @Ignore
     @Test
-    public void clickServiceHistoryTest() throws InterruptedException{
+    public void clickServiceHistoryTest() throws InterruptedException {
         checkBox.clickServiceHistory();
         Thread.sleep(2000);
         checkBox.clickServiceHistory();
@@ -71,7 +70,7 @@ public class CheckboxTest {
     }
 
     @Test
-    public void clickShowResultsTest()throws InterruptedException{
+    public void clickShowResultsTest() throws InterruptedException {
         Thread.sleep(2000); // sleep for 2 sec to make sure the the button is ready
         checkBox.clickShowResults();
         Assert.assertNotNull(driver.findElement(By.cssSelector("div[class='srp-filter-container__title tabs-title']")));
