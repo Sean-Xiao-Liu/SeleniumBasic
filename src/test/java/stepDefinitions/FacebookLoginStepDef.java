@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinitions;
 
 
 import introduction.DriverConfiguration;
@@ -6,13 +6,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+@RunWith(Cucumber.class)
 public class FacebookLoginStepDef {
 
     public WebDriver driver = DriverConfiguration.chooseDriver("chrome");
