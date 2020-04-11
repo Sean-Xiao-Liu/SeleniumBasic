@@ -35,7 +35,6 @@ public class FacebookLoginStepDef {
     }
 
     @Then("User should be logged in")
-    public void userShouldBeLoggedIn(){
-
+    public void userShouldBeLoggedIn() {
     }
 }
