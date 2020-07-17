@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
 * */
 
 @CucumberOptions(
-        features = "src/test/java/features",
+// change the test features by update
+        features = {"src/test/java/features/FindDealer.feature"},
         glue = "stepDefinitions"
 
 )

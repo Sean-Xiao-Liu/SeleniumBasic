@@ -1,6 +1,7 @@
 package carfax.pages;
 
-import com.carfax_ucl.utilities.Driver;
+
+import carfax.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ShareHeaderPage {
 
     public ShareHeaderPage(){
-        PageFactory.initElements(Driver.get(),this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(xpath = "(//button[contains(text(),'Share ')])[1]")

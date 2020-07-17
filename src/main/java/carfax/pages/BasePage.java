@@ -13,12 +13,20 @@ public class BasePage {
     private SendToMyPhonePage sendToMyPhone;
     private ShareHeaderPage shareHeader;
     private MapAndDirectionsPage mapAndDirectionsPage;
+    private BetaHomePage betaHomePage;
 //    private BodyTypeOrPricePage bodyTypeOrPricePage;
 //    private FiltersSRPPage filtersSRPPage;
 //    private FooterLinksPage footerLinksPage;
 //    private DealerWebsitePage dealerWebsitePage;
 //    private DMSRPPage dmsrpPage;
 //    private CheckAvailabilityLinksPage checkAvailabilityLinks;
+
+    public BetaHomePage getBetaHomePage(){
+        if(betaHomePage == null){
+            betaHomePage = new BetaHomePage();
+        }
+        return betaHomePage;
+    }
 
     public FindDealerPage getFindDealerPage() {
         if (findDealerPage == null) {
